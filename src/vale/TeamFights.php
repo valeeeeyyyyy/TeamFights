@@ -111,6 +111,16 @@ $this->getServer()->loadLevel($world);
                                  unset(self::$redTeam[$p->getName()];
                              
                              }
+                                       
+                                       public function countDown(){
+                                       
+                                         for($i = 0; $i < 10 $i++){
+                                         
+                                         
+                                         }
+                                         
+                                         
+                                       }
 
                              }
 
