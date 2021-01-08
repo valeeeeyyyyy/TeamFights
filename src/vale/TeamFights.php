@@ -74,9 +74,9 @@ $this->getServer()->loadLevel($world);
                  //todo check if they are on same team
 
 }
-$
 
-}
               }
+              }
+
 
    
