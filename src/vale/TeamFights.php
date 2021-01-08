@@ -47,6 +47,9 @@ $this->getServer()->loadLevel($world);
 }
    }
    
+   
+   //i made this im school will cleanup code when home
+   
    public static function ApplyTeam(Player $player, string $team){
 
      
@@ -73,11 +76,24 @@ $this->getServer()->loadLevel($world);
                 $entity = $event->getEntity();
                 $damager = $event->getDamager();
                 
+                if($entity && $damager instanceof Player){
+                
                  if($event instanceof EntityDamageByEntityEvent){
+                   if($this->isRed($entity) && $this->isRed($damager)){
+                     
+                     $event->setCancelled(true);
+                   
+                   }elseif($this->isBlue($entity) && $this->isBlue($damager){
+                   
+                     $event->setCancelled(true);
+                   
+                   }
+                           
                  
                  }
             
                 }
+                                   }
                   public function isBlue(Player $player){
                 return isset(self::$blueTeam[$player->getName()] = true;
               }
