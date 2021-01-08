@@ -11,7 +11,7 @@ class TeamFights extends PluginBase implements Listener{
   /** @var array $readTeam*/
   public static $redTeam = [];
   
-    /** @var array blueTeam*/
+    /** @var array $blueTeam*/
   public static $blueTeam = [];
   
   
@@ -45,6 +45,8 @@ $this->getServer()->loadLevel($world);
 
   
 }
+   }
+   
    public static function ApplyTeam(Player $player, string $team){
 
      
@@ -64,19 +66,28 @@ $this->getServer()->loadLevel($world);
         
    break;
            }
-              } 
               }
+              
               public function noHitTeamate(EntityDamageByEntityEvent $event){
                 
                 $entity = $event->getEntity();
                 $damager = $event->getDamager();
                 
-                 //todo check if they are on same team
-
-}
-
+                 if($event instanceof EntityDamageByEntityEvent){
+                 
+                 }
+            
+                }
+                  public function isBlue(Player $player){
+                return isset(self::$blueTeam[$player->getName()] = true;
               }
-              }
+              
+                             
+                             
+           public function isRed(Player $player){
+                return isset(self::$redTeam[$player->getName()] = true;
+                             }
 
+                             }
 
    
