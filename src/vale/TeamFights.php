@@ -39,14 +39,28 @@ foreach(self::$worlds as $world){
 if(!$this->getServer()->isLevelLoaded($world){
 
 $this->getServer()->loadLevel($world);
+  
+  $this->getScheduler()->scheduleRepeatingTask(new GameTask($this),20);
+  
 
   
 }
-   }
-   }
+   public static function ApplyTeam(Player $player, string $team){
 
-  
-  
+     
+     switch($team){
+
+       case "red":
+         //coding on phone aids asf
+         if(!isset(self::$readTeam[$player->getName()]){
+           self::$redTeam[$player->getName()] = true;
+           $player->sendMessage("U joined read team);
+          
+   break;
 
 
 }
+} 
+   }
+   }
+   
