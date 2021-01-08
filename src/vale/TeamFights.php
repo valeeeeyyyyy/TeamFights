@@ -104,7 +104,7 @@ $this->getServer()->loadLevel($world);
                 return isset(self::$redTeam[$player->getName()] = true;
                              }
                              
-                             public function removeFromTeams(PlayerQuitEvent $event){
+                             public function PlayerQuit(PlayerQuitEvent $event){
                                
                                $p = $event->getPlayer();
                                if(isset(self::$redTeam[$p->getName()]){
