@@ -103,6 +103,14 @@ $this->getServer()->loadLevel($world);
            public function isRed(Player $player){
                 return isset(self::$redTeam[$player->getName()] = true;
                              }
+                             
+                             public function removeFromTeams(PlayerQuitEvent $event){
+                               
+                               $p = $event->getPlayer();
+                               if(isset(self::$redTeam[$p->getName()]){
+                                 unset(self::$redTeam[$p->getName()];
+                             
+                             }
 
                              }
 
