@@ -54,13 +54,29 @@ $this->getServer()->loadLevel($world);
          //coding on phone aids asf
          if(!isset(self::$readTeam[$player->getName()]){
            self::$redTeam[$player->getName()] = true;
-           $player->sendMessage("U joined read team);
-          
+           $player->sendMessage("U joined read team");
+        
    break;
-
+           case "blue":
+           if(!isset(self::$blueTeam[$player->getName()]){
+           self::$blueTeam[$player->getName()] = true;
+           $player->sendMessage("U joined blue team");
+        
+   break;
+           }
+              } 
+              }
+              public function noHitTeamate(EntityDamageByEntityEvent $event){
+                
+                $entity = $event->getEntity();
+                $damager = $event->getDamager();
+                
+                 //todo check if they are on same team
 
 }
-} 
-   }
-   }
+$
+
+}
+              }
+
    
